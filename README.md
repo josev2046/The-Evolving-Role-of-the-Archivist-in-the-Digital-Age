@@ -4,6 +4,15 @@
 
 https://github.com/user-attachments/assets/c50884af-0bae-4a1d-af1c-fc6d9d947cca
 
+[The audio recording features José Velázquez's introduction to [CASE STUDIES FOR RESEARCH IN DIGITAL HUMANITIES (2024–25 COURSE)](https://www.upo.es/master/Master-Oficial-Historia-y-Humanidades-Digitales/).]
+
+
+
+
+
+
+
+
 
 
 This C4 Container diagram illustrates the multifaceted role of the archivist within the contemporary (2025) digital archiving domain.
