@@ -1,0 +1,73 @@
+@startuml C4_Container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+' Define a custom tag for the central element's color
+AddElementTag("central_highlight", "#FF6347", "#FFFFFF", "#CD5C5C")
+
+' Set all lines to be orthogonal (right-angled)
+skinparam linetype ortho
+
+' --- HIDE STEREOTYPES AND FOOTERS (More aggressive and comprehensive attempt) ---
+' Targeting all C4 elements and then specific types as a fallback
+skinparam C4Element {
+    stereotypesection visible false
+    footer visible false
+}
+skinparam Person {
+    stereotypesection visible false
+    footer visible false
+}
+skinparam Container {
+    stereotypesection visible false
+    footer visible false
+}
+skinparam ContainerDb {
+    stereotypesection visible false
+    footer visible false
+}
+' ------------------------------------
+
+
+caption The Archivist's Role in 2025 [(c) Jose Velazquez, MA]
+
+' Define the Archivist as a Person (Actor) outside the system boundary
+Person(the_archivist, "The Archivist", "Key professional safeguarding collective memory in the digital age.")
+
+Container_Boundary(digital_age_archiving_domain, "Digital Age Archiving Domain") {
+
+    ' Change to ContainerDb to represent it as a database, applying the highlight tag
+    ContainerDb(digital_records_repository, "**Digital Records**", "", "The central collection of diverse digital content.", $tags = "central_highlight")
+
+
+    ' Components surrounding the repository
+    Container(user_access_interfaces, "User-Friendly Access Interfaces", "", "Offers intuitive access for public and researchers.")
+    Container(preservation_strategies_system, "Innovative Preservation Strategies", "", "Ensures long-term accessibility and integrity.")
+    Container(authenticity_verification_tools, "Authenticity Verification", "", "Verifies integrity and provenance.")
+    Container(ethical_governance_module, "Ethical Governance & Policy", "", "Defines policies for sensitive materials.")
+    Container(community_engagement_platform, "Community Engagement", "", "Facilitates interaction and collection of histories.")
+    Container(digital_literacy_program, "Digital Literacy & Critical Thinking", "", "Empowers users to navigate complex information.")
+
+
+    ' Relationships between components
+    Rel(user_access_interfaces, digital_records_repository, "Provides access to")
+    Rel(preservation_strategies_system, digital_records_repository, "Preserves and manages")
+    Rel(authenticity_verification_tools, digital_records_repository, "Verifies integrity of")
+    Rel(ethical_governance_module, digital_records_repository, "Governs access to")
+    Rel(community_engagement_platform, digital_records_repository, "Contributes to and contextualizes")
+    Rel(digital_literacy_program, digital_records_repository, "Educates on interpreting")
+
+    Rel(preservation_strategies_system, authenticity_verification_tools, "Works with for")
+    Rel(community_engagement_platform, digital_literacy_program, "Supports")
+    Rel(ethical_governance_module, user_access_interfaces, "Informs")
+}
+
+' Relationships from The Archivist to the Digital Age Archiving Domain's components
+Rel(the_archivist, digital_records_repository, "Manages and interacts with")
+Rel(the_archivist, preservation_strategies_system, "Applies and develops")
+Rel(the_archivist, authenticity_verification_tools, "Utilizes and implements")
+Rel(the_archivist, ethical_governance_module, "Navigates and shapes")
+Rel(the_archivist, community_engagement_platform, "Engages through")
+Rel(the_archivist, digital_literacy_program, "Promotes and fosters")
+Rel(the_archivist, user_access_interfaces, "Ensures accessibility via")
+
+@enduml
