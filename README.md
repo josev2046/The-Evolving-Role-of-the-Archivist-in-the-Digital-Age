@@ -2,7 +2,9 @@
 
 
 
-https://github.com/user-attachments/assets/c50884af-0bae-4a1d-af1c-fc6d9d947cca
+https://github.com/user-attachments/assets/9076038a-907c-43c4-bbbe-4a1e7cd8fb6f
+
+
 
 [The audio recording features José Velázquez's introduction to [CASE STUDIES FOR RESEARCH IN DIGITAL HUMANITIES (2024–25 COURSE)](https://www.upo.es/master/Master-Oficial-Historia-y-Humanidades-Digitales/).]
 
